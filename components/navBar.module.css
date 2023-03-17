@@ -1,0 +1,7 @@
+.navBarContainer {
+  width: 100vw;
+  height: 20px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+}
