@@ -1,19 +1,46 @@
 body {
   margin: 0;
-  background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+  background: linear-gradient(-45deg, #344e41, #708d70, #7f947f, #708d70, #344e41);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
   font-family: sans-serif;
 }
-
+.homeContainer {
+  background-color: #dad7cd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.h3title {
+  color: #dad7cd;
+}
 .cardContainer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .idIngredients {
   width: 500px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 li.liIngredients {
@@ -27,16 +54,29 @@ ul.ulIngredients {
   padding: 0;
 }
 .idContainer {
+  width: 700px;
+  border-radius: 15px;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #dad7cd;
+  padding: 20px;
+}
+.headContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .recipesHead {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+  text-align: center;
+  color: #dad7cd;
+  width: 200px;
+  margin: 20px;
+  background-color: #344e41;
+  border-radius: 15px;
 }
 .idDescription {
   display: flex;
@@ -46,35 +86,62 @@ ul.ulIngredients {
 }
 
 .card {
-  width: 200px;
-  height: 200px;
-  background-color: rgb(167, 135, 209);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 400px;
+  background-color: #344e41;
   border-radius: 15px;
   box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.26);
 }
 
+.linkButton {
+  font-size: 10px;
+  padding: 10px;
+  background-color: #dad7cd;
+  border-radius: 6px;
+}
+
+.cardImage {
+  object-fit: cover;
+}
 li {
   text-align: center;
-  padding: 20px;
   list-style: none;
   color: black;
 }
 
 a:link {
+  font-size: 5px;
   text-decoration: none;
-  color: black;
+  color: #344e41;
   font-size: 20px;
 }
 
 a:visited {
+  font-size: 5px;
   text-decoration: none;
-  color: black;
+  color: #344e41;
 }
 
 .backToHome {
   margin: 20px;
   padding: 15px;
-  background-color: white;
+  background-color: #dad7cd;
   width: 200px;
   border-radius: 8px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
